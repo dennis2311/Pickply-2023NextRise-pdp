@@ -1,33 +1,86 @@
-.background {
+/* 배경 */
+.result__background {
   position: absolute;
   width: 100%;
 }
 
-.scrim {
+.result__scrim {
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.content.container {
-  position: absolute;
-  height: 100%;
+.result__row {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 128px;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
-.content__text {
+.result__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 내용 */
+.result__container {
+  z-index: 100;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0px;
+}
+
+/* 상단 텍스트 내용 */
+.result__title__text {
   margin: 0;
   padding: 0;
   color: white;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: center;
 }
 
-.bold {
+/* 하단 그래프 */
+.result__graph__container {
+  display: flex;
+  width: 70%;
+  height: 156px;
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.result__graph__text__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.result__graph__filler {
+  display: flex;
+  align-items: center;
+  min-width: 15%;
+  padding: 16px;
+}
+
+.result__graph__filler#coke {
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #ffd600, #d40d16);
+}
+
+.result__graph__filler#pepsi {
+  justify-content: flex-end;
+  background-color: #3a3a3a;
+}
+
+.result__graph__text {
+  color: white;
+  font-size: 4rem;
   font-weight: bold;
 }

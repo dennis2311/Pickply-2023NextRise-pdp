@@ -1,15 +1,17 @@
 .page-container {
+  flex: 1;
   display: flex;
   width: 100%;
   height: 100%;
   background-color: aliceblue;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }

@@ -10,14 +10,7 @@ SwiperCore.use([Autoplay]);
  */
 export const Pickply = () => {
   return (
-    <div
-      className="page-container"
-      style={{
-        position: "relative",
-        justifyContent: "flex-end",
-        overflow: "hidden",
-      }}
-    >
+    <div className="pickply__container">
       <img src={PickplyBackgroundImage} style={{ width: "auto" }} />
 
       <div className="pickply__content container">

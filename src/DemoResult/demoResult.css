@@ -1,0 +1,103 @@
+.demo__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #dbd6ff;
+  overflow: hidden;
+}
+
+.demo__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* 제목 */
+.demo__title__container {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #5640dd 15%, #8f84d0 85%);
+  padding: 24px 128px;
+  border-radius: 100px;
+}
+
+.demo__title__horline {
+  flex: 1;
+  height: 2px;
+}
+
+/* 1위 */
+.demo__1st__card__container {
+  display: flex;
+  width: 20%;
+  height: 70%;
+  flex-direction: column;
+  border: 3px solid #594e96;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(89, 78, 150, 0.12) 0px -12px 30px, rgba(89, 78, 150, 0.12) 0px 4px 6px,
+    rgba(89, 78, 150, 0.17) 0px 12px 13px, rgba(89, 78, 150, 0.09) 0px -3px 5px;
+}
+
+.demo__1st__card__header {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #594e96;
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: #dbd6ff;
+  padding: 0 24px;
+}
+
+.demo__1st__card__body {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: #8f84d0;
+  padding: 0 24px;
+}
+
+/* 그 외 순위 */
+.demo__card__container {
+  display: flex;
+  width: 16%;
+  height: 60%;
+  flex-direction: column;
+  border: 3px solid #594e96;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.demo__card__header {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #594e96;
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: #dbd6ff;
+  padding: 0 24px;
+}
+
+.demo__card__body {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: #beb5ec;
+  padding: 0 24px;
+}
