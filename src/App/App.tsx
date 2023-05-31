@@ -27,13 +27,14 @@ export const App = () => {
       .request<Data[]>({
         method: "GET",
         url: "https://api.pickply.com/marketing/nextrise",
+        headers: { "Acess-Control-Allow-Origin": "*" },
       })
       .then((res) => setData(res.data));
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === " ") {
-      // getNewerData();
+      getNewerData();
     }
   };
 
