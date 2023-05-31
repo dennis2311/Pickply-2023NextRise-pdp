@@ -14,11 +14,11 @@ export const App = () => {
   return (
     <div className="app container">
       <Swiper
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 2800,
-          disableOnInteraction: true,
-        }}
+        // modules={[Autoplay]}
+        // autoplay={{
+        //   delay: 2800,
+        //   disableOnInteraction: true,
+        // }}
         slidesPerView={1}
       >
         <SwiperSlide>
