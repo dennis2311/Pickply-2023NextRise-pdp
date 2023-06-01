@@ -87,7 +87,7 @@ export const DemoResult = ({ data }: { data: Data[] }) => {
           <div className="demo__card__body">
             {result.length >= 2
               ? `${getAgeGroupText(result[1].ageGroup)} ${getGenderText(
-                  result[0].gender
+                  result[1].gender
                 )}`
               : "?"}
           </div>
@@ -98,7 +98,7 @@ export const DemoResult = ({ data }: { data: Data[] }) => {
           <div className="demo__card__body">
             {result.length >= 3
               ? `${getAgeGroupText(result[2].ageGroup)} ${getGenderText(
-                  result[0].gender
+                  result[2].gender
                 )}`
               : "?"}
           </div>
@@ -109,7 +109,7 @@ export const DemoResult = ({ data }: { data: Data[] }) => {
           <div className="demo__card__body">
             {result.length >= 4
               ? `${getAgeGroupText(result[3].ageGroup)} ${getGenderText(
-                  result[0].gender
+                  result[3].gender
                 )}`
               : "?"}
           </div>
