@@ -21,12 +21,38 @@ export const DemoResult = ({ data }: { data: Data[] }) => {
   const result = Object.entries(groupCount).map(([key, count]) => {
     const [gender, ageGroup] = key.split("-");
     const correctCount = groupCorrectCount[key] || 0;
-    const correctRatio = (correctCount / count) * 100;
+    const correctRatio = Math.floor((correctCount / count) * 1000) / 10;
     return { gender, ageGroup, correctRatio };
   });
 
   // 정답률에 따라 내림차순으로 정렬합니다.
   result.sort((a, b) => b.correctRatio - a.correctRatio);
+
+  const getGenderText = (gender: string) => {
+    switch (gender) {
+      case "MALE":
+        return "남성";
+      case "FEMALE":
+        return "여성";
+    }
+  };
+
+  const getAgeGroupText = (ageGroup: string) => {
+    switch (ageGroup) {
+      case "TEEN":
+        return "10대";
+      case "TWENTY":
+        return "20대";
+      case "THIRTY":
+        return "30대";
+      case "FOURTY":
+        return "40대";
+      case "FIFTY":
+        return "50대";
+      case "SIXTY":
+        return "60대";
+    }
+  };
 
   return (
     <div className="demo__container">
@@ -45,24 +71,48 @@ export const DemoResult = ({ data }: { data: Data[] }) => {
       <div className="demo__row" style={{ flex: 3 }}>
         <div className="demo__1st__card__container">
           <div className="demo__1st__card__header">1위</div>
-          <div className="demo__1st__card__body">{`20대 여성`}</div>
+          <div className="demo__1st__card__body">
+            {result.length >= 1
+              ? `${getAgeGroupText(result[0].ageGroup)} ${getGenderText(
+                  result[0].gender
+                )}`
+              : "?"}
+          </div>
         </div>
       </div>
 
       <div className="demo__row" style={{ flex: 3 }}>
         <div className="demo__card__container">
           <div className="demo__card__header">2위</div>
-          <div className="demo__card__body">{`30대 남성`}</div>
+          <div className="demo__card__body">
+            {result.length >= 2
+              ? `${getAgeGroupText(result[1].ageGroup)} ${getGenderText(
+                  result[0].gender
+                )}`
+              : "?"}
+          </div>
         </div>
 
         <div className="demo__card__container">
           <div className="demo__card__header">3위</div>
-          <div className="demo__card__body">{`30대 여성`}</div>
+          <div className="demo__card__body">
+            {result.length >= 3
+              ? `${getAgeGroupText(result[2].ageGroup)} ${getGenderText(
+                  result[0].gender
+                )}`
+              : "?"}
+          </div>
         </div>
 
         <div className="demo__card__container">
           <div className="demo__card__header">4위</div>
-          <div className="demo__card__body">{`20대 남성`}</div>
+          <div className="demo__card__body">
+            {result.length >= 4
+              ? `${getAgeGroupText(result[3].ageGroup)} ${getGenderText(
+                  result[0].gender
+                )}`
+              : "?"}
+          </div>
         </div>
       </div>
 

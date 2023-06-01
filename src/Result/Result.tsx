@@ -68,8 +68,14 @@ export const Result = ({ data }: { data: Data[] }) => {
             </div>
           </div>
           <div className="result__graph__text__row">
-            <span className="result__graph__text">50%</span>
-            <span className="result__graph__text">50%</span>
+            <span className="result__graph__text">{`${
+              Math.floor((cokeSelection.length / data.length) * 1000) / 10
+            }%`}</span>
+            <span className="result__graph__text">{`${
+              Math.floor(
+                ((data.length - cokeSelection.length) / data.length) * 1000
+              ) / 10
+            }%`}</span>
           </div>
         </div>
 
