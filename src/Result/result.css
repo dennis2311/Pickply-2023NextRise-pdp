@@ -1,3 +1,16 @@
+.result__container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
 /* 배경 */
 .result__background {
   position: absolute;
@@ -26,12 +39,13 @@
 }
 
 /* 내용 */
-.result__container {
+.result__content__container {
   z-index: 100;
-  flex: 1;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 48px 0px;
 }

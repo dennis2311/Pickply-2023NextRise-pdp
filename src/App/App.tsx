@@ -15,7 +15,7 @@ SwiperCore.use([Autoplay]);
 export type Data = {
   preference: string;
   selection: string;
-  agegroup: string;
+  ageGroup: string;
   gender: string;
 };
 
@@ -49,16 +49,11 @@ export const App = () => {
   return (
     <div className="app container">
       <Swiper
-        // modules={[Autoplay]}
-        // autoplay={{
-        //   delay: 2800,
-        //   disableOnInteraction: true,
-        // }}
-        // style={{
-        //   width: "100%",
-        //   height: "100%",
-        //   border: "20px solid yellow",
-        // }}
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 3600,
+          disableOnInteraction: true,
+        }}
         slidesPerView={1}
       >
         <SwiperSlide>

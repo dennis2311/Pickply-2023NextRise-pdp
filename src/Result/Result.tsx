@@ -8,8 +8,16 @@ import "./result.css";
  * 단순 콜라 vs 펩시 결과 페이지
  */
 export const Result = ({ data }: { data: Data[] }) => {
+  const cokeSelection = data.filter((d) => d.selection === "COKE");
+
+  const cokeFlex = cokeSelection.length > 1 ? cokeSelection.length : 1;
+  const pepsiFlex =
+    data.length - cokeSelection.length > 1
+      ? data.length - cokeSelection.length
+      : 1;
+
   return (
-    <div className="page-container" style={{ position: "relative" }}>
+    <div className="result__container" style={{ position: "relative" }}>
       {/* 배경 파트 */}
       <img
         className="result__background"
@@ -18,8 +26,13 @@ export const Result = ({ data }: { data: Data[] }) => {
       />
       <div className="result__scrim" />
 
-      <div className="result__container">
-        <div className="result__column" style={{ flex: 1 }}>
+      <div className="result__content__container">
+        <div className="result__column" style={{ flex: 1 }} />
+
+        <div
+          className="result__column"
+          style={{ flex: 1, justifyContent: "flex-end" }}
+        >
           <span
             className="result__title__text"
             style={{ marginBottom: "16px" }}
@@ -42,14 +55,14 @@ export const Result = ({ data }: { data: Data[] }) => {
             <div
               id="coke"
               className="result__graph__filler"
-              style={{ flex: 1 }}
+              style={{ flex: cokeFlex }}
             >
               <img src={CocaColaSymbolImage} style={{ height: "80px" }} />
             </div>
             <div
               id="pepsi"
               className="result__graph__filler"
-              style={{ flex: 1 }}
+              style={{ flex: pepsiFlex }}
             >
               <img src={PepsiSymbolImage} style={{ height: "80px" }} />
             </div>
